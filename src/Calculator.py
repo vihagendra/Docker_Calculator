@@ -16,9 +16,11 @@ def multiplication(a, b):
 def division(a, b):
     a = float(a)
     b = float(b)
-    return round(b/a, 9)
+    return round(b / a, 9)
 
 
+def squaring(a):
+    return int(a) ** 2
 
 
 class Calculator:
@@ -42,3 +44,8 @@ class Calculator:
     def divide(self, a, b):
         self.result = division(a, b)
         return self.result
+
+    def sqr(self, a):
+        self.result = squaring(a)
+        return self.result
+
