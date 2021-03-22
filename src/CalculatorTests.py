@@ -33,6 +33,11 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.multiply(int(row['mvalue1']), int(row['mvalue2'])), int(row['mresult']))
             self.assertEqual(self.calculator.result, int(row['mresult']))
 
+    def test_divide_method_calculator(self):
+        for row in test_data:
+            self.assertEqual(self.calculator.divide(float(row['dvalue1']), float(row['dvalue2'])), float(row['dresult']))
+            self.assertEqual(self.calculator.result, float(row['dresult']))
+
 
 
 if __name__ == '__main__':
