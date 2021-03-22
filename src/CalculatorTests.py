@@ -40,8 +40,13 @@ class MyTestCase(unittest.TestCase):
 
     def test_sqr_method_calculator(self):
         for row in test_data:
-            self.assertEqual(self.calculator.sqr(int(row['sqvalue']), int(row['sqresult']))
+            self.assertEqual(self.calculator.sqr(int(row['sqval'])), int(row['sqresult']))
             self.assertEqual(self.calculator.result, int(row['sqresult']))
+
+    def test_sqrt_method_calculator(self):
+        for row in test_data:
+            self.assertEqual(self.calculator.sqrt(float(row['sqrtval1'])), round(float(row['sqrtresult'])))
+            self.assertEqual(self.calculator.result, round(float(row['sqrtresult'])))
 
 
 if __name__ == '__main__':
