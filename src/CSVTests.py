@@ -6,7 +6,7 @@ from pprint import pprint
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('unit_test-addition.csv')
+        self.csv_reader = CsvReader('unittest-addition.csv')
 
     def test_return_data_as_objects(self):
         people = self.csv_reader.return_data_as_objects('person')
