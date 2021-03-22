@@ -35,13 +35,16 @@ class MyTestCase(unittest.TestCase):
 
     def test_divide_method_calculator(self):
         for row in test_data:
-            self.assertEqual(self.calculator.divide(float(row['dvalue1']), float(row['dvalue2'])), float(row['dresult']))
+            self.assertEqual(self.calculator.divide(float(row['dvalue1']), float(row['dvalue2'])),
+                             float(row['dresult']))
             self.assertEqual(self.calculator.result, float(row['dresult']))
 
     def test_sqr_method_calculator(self):
         for row in test_data:
             self.assertEqual(self.calculator.sqr(int(row['sqval'])), int(row['sqresult']))
             self.assertEqual(self.calculator.result, int(row['sqresult']))
+
+    # syntax bug fixed
 
     def test_sqrt_method_calculator(self):
         for row in test_data:
