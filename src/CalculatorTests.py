@@ -3,7 +3,9 @@ import unittest
 from Calculator import Calculator
 
 from CsvReader import CsvReader
+
 test_data = CsvReader('/src/unittest-all.csv').data
+
 
 class MyTestCase(unittest.TestCase):
 
@@ -25,6 +27,11 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             self.assertEqual(self.calculator.subtract(int(row['svalue1']), int(row['svalue2'])), int(row['sresult']))
             self.assertEqual(self.calculator.result, int(row['sresult']))
+
+    def test_multiply_method_calculator(self):
+        for row in test_data:
+            self.assertEqual(self.calculator.multiply(int(row['mvalue1']), int(row['mvalue2'])), int(row['mresult']))
+            self.assertEqual(self.calculator.result, int(row['mresult']))
 
 
 
