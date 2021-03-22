@@ -38,6 +38,10 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.divide(float(row['dvalue1']), float(row['dvalue2'])), float(row['dresult']))
             self.assertEqual(self.calculator.result, float(row['dresult']))
 
+    def test_sqr_method_calculator(self):
+        for row in test_data:
+            self.assertEqual(self.calculator.sqr(int(row['sqvalue']), int(row['sqresult']))
+            self.assertEqual(self.calculator.result, int(row['sqresult']))
 
 
 if __name__ == '__main__':
