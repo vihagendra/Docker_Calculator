@@ -23,6 +23,11 @@ def squaring(a):
     return int(a) ** 2
 
 
+def squareroot(a):
+    a = a ** 0.5
+    return round(a)
+
+
 class Calculator:
     result = 0
 
@@ -49,3 +54,7 @@ class Calculator:
         self.result = squaring(a)
         return self.result
 
+    def sqrt(self, a):
+        a = float(a)
+        self.result = squareroot(a)
+        return self.result
